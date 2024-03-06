@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01_Calculator", "01_Calcula
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02_SiteLayout", "02_SiteLayout\02_SiteLayout.csproj", "{2B83ACB2-DD78-4DCD-A9D0-2E22E0E3B9B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_ShulteTable", "03_ShulteTable\03_ShulteTable.csproj", "{89890632-8F64-4418-AC27-FAECD5D1E431}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03_ShulteTable", "03_ShulteTable\03_ShulteTable.csproj", "{89890632-8F64-4418-AC27-FAECD5D1E431}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_PhoneBook", "04_PhoneBook\04_PhoneBook.csproj", "{3F1BF278-72ED-4FB3-A968-8C31A842AF36}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{89890632-8F64-4418-AC27-FAECD5D1E431}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89890632-8F64-4418-AC27-FAECD5D1E431}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89890632-8F64-4418-AC27-FAECD5D1E431}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F1BF278-72ED-4FB3-A968-8C31A842AF36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F1BF278-72ED-4FB3-A968-8C31A842AF36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F1BF278-72ED-4FB3-A968-8C31A842AF36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F1BF278-72ED-4FB3-A968-8C31A842AF36}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
