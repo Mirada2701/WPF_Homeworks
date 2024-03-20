@@ -1,0 +1,137 @@
+﻿<Window x:Class="_05_CourseWork.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_05_CourseWork"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="630" Width="700" Background="Purple" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Style.Setters>
+                <Setter Property="Background" Value="White"/>
+                <Setter Property="Padding" Value="5"/>
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="Effect">
+                    <Setter.Value>
+                        <DropShadowEffect ShadowDepth="7" Opacity="0.6"/>
+                    </Setter.Value>
+                </Setter>
+            </Style.Setters>
+
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="MouseEnter">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation
+                        Duration="0:0:0.100"
+                        Storyboard.TargetProperty="FontSize"
+                        To="20"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+
+                <EventTrigger RoutedEvent="Mouse.MouseLeave">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation
+                        Duration="0:0:1"
+                        Storyboard.TargetProperty="FontSize"
+                        To="12"  />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="purpleBtn" BasedOn="{StaticResource {x:Type Button}}" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="Orange"/>
+        </Style>
+        <Style x:Key="redBtn" BasedOn="{StaticResource {x:Type Button}}" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="Red"/>
+        </Style>
+        <Style x:Key="blueBtn" BasedOn="{StaticResource {x:Type Button}}" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="Blue"/>
+        </Style>
+        <Style x:Key="yellowBtn" BasedOn="{StaticResource {x:Type Button}}" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="Yellow"/>
+        </Style>
+        <Style x:Key="greenBtn" BasedOn="{StaticResource {x:Type Button}}" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="LimeGreen"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="150"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <ListBox Grid.Column="1" HorizontalAlignment="Stretch" Background="Purple" ItemsSource="{Binding Path=TimeToNum}" 
+          DisplayMemberPath="FullInfo"></ListBox>
+            <StackPanel Orientation="Vertical" Grid.Column="0">
+            <TextBlock HorizontalAlignment="Center">Find Number : <Run FontSize="20" FontFamily="Bold" Text="{Binding Path=FindNum}"></Run></TextBlock>
+                <Border Background="Beige" CornerRadius="35" BorderThickness="10" VerticalAlignment="Center">
+                    <Border Background="DarkViolet"  CornerRadius="15" Margin="10" BorderThickness="5">
+                        <UniformGrid x:Name="grid" Background="Purple" Margin="10" Columns="7" Rows="7">
+                            <Button Click="Button_Click" Style="{StaticResource purpleBtn}" Margin="3"></Button>
+                            <Button Click="Button_Click" Margin="3"></Button>
+                            <Button Click="Button_Click" Style="{StaticResource blueBtn}" Margin="3"></Button>
+                            <Button Click="Button_Click" Margin="3"></Button>
+                            <Button Click="Button_Click" Style="{StaticResource greenBtn}" Margin="3"></Button>
+                            <Button Click="Button_Click" Style="{StaticResource purpleBtn}" Margin="3"></Button>
+                            <Button Click="Button_Click" Style="{StaticResource greenBtn}" Margin="3"></Button>
+                            <Button Click="Button_Click" Style="{StaticResource redBtn}" Margin="3"></Button>
+                            <Button Click="Button_Click" Style="{StaticResource redBtn}" Margin="3"></Button>
+                            <Button Click="Button_Click" Style="{StaticResource redBtn}" Margin="3"></Button>
+                            <Button Click="Button_Click" Margin="3"></Button>
+                            <Button Click="Button_Click" Style="{StaticResource redBtn}" Margin="3"></Button>
+                            <Button Click="Button_Click" Style="{StaticResource purpleBtn}" Margin="3"></Button>
+                            <Button Click="Button_Click" Style="{StaticResource greenBtn}" Margin="3"></Button>
+                            <Button Click="Button_Click" Style="{StaticResource purpleBtn}" Margin="3"></Button>
+                            <Button Click="Button_Click" Margin="3"></Button>
+                            <Button Click="Button_Click" Margin="3"></Button>
+                            <Button Click="Button_Click" Style="{StaticResource purpleBtn}" Margin="3"></Button>
+                            <Button Click="Button_Click" Style="{StaticResource purpleBtn}" Margin="3"></Button>
+                            <Button Click="Button_Click" Margin="3"></Button>
+                            <Button Click="Button_Click" Style="{StaticResource purpleBtn}" Margin="3"></Button>
+                            <Button Click="Button_Click" Margin="3"></Button>
+                            <Button Click="Button_Click" Style="{StaticResource yellowBtn}" Margin="3"></Button>
+                            <Button Click="Button_Click" Style="{StaticResource purpleBtn}" Margin="3"></Button>
+                            <Button Click="Button_Click" Margin="3" IsEnabled="False">
+                                <Image Source="Eye\file.png" Stretch="Fill"/>
+                            </Button>
+                            <Button Click="Button_Click" Style="{StaticResource yellowBtn}" Margin="3"></Button>
+                            <Button Click="Button_Click" Style="{StaticResource blueBtn}" Margin="3"></Button>
+                            <Button Click="Button_Click" Margin="3"></Button>
+                            <Button Click="Button_Click" Style="{StaticResource greenBtn}" Margin="3"></Button>
+                            <Button Click="Button_Click" Style="{StaticResource greenBtn}" Margin="3"></Button>
+                            <Button Click="Button_Click" Style="{StaticResource yellowBtn}" Margin="3"></Button>
+                            <Button Click="Button_Click" Margin="3"></Button>
+                            <Button Click="Button_Click" Style="{StaticResource purpleBtn}" Margin="3"></Button>
+                            <Button Click="Button_Click" Margin="3"></Button>
+                            <Button Click="Button_Click" Style="{StaticResource purpleBtn}" Margin="3"></Button>
+                            <Button Click="Button_Click" Style="{StaticResource blueBtn}" Margin="3"></Button>
+                            <Button Click="Button_Click" Style="{StaticResource blueBtn}" Margin="3"></Button>
+                            <Button Click="Button_Click" Style="{StaticResource purpleBtn}" Margin="3"></Button>
+                            <Button Click="Button_Click" Style="{StaticResource yellowBtn}" Margin="3"></Button>
+                            <Button Click="Button_Click" Style="{StaticResource blueBtn}" Margin="3"></Button>
+                            <Button Click="Button_Click" Style="{StaticResource purpleBtn}" Margin="3"></Button>
+                            <Button Click="Button_Click" Style="{StaticResource purpleBtn}" Margin="3"></Button>
+                            <Button Click="Button_Click" Style="{StaticResource yellowBtn}" Margin="3"></Button>
+                            <Button Click="Button_Click" Margin="3"></Button>
+                            <Button Click="Button_Click" Style="{StaticResource greenBtn}" Margin="3"></Button>
+                            <Button Click="Button_Click" Style="{StaticResource purpleBtn}" Margin="3"></Button>
+                            <Button Click="Button_Click" Style="{StaticResource redBtn}" Margin="3"></Button>
+                            <Button Click="Button_Click" Style="{StaticResource redBtn}" Margin="3"></Button>
+                            <Button Click="Button_Click" Style="{StaticResource redBtn}" Margin="3"></Button>
+                        </UniformGrid>
+                    </Border>
+                </Border>
+                <Button Background="LightBlue" Width="400" Click="Button_Click_1">Start Test</Button>
+            </StackPanel>
+        
+    </Grid>
+   
+</Window>
