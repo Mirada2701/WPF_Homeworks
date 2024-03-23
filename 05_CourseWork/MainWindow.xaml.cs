@@ -49,7 +49,7 @@ namespace _05_CourseWork
                     {
                         time = DateTime.Now - model.Start;
                         model.AddStat(time, "All time : ");
-                        MessageBox.Show($"Gratz!!!\nYour Time = {time}","Winner!!!",MessageBoxButton.OK);
+                        MessageBox.Show($"Gratz!!!\nYour Time = {time}\nPress Start Test to begin testing again","Winner!!!",MessageBoxButton.OK);
                     }
                 }
                 model.K++;

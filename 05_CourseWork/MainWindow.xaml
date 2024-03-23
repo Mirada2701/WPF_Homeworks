@@ -68,7 +68,7 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition Width="150"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <ListBox Grid.Column="1" HorizontalAlignment="Stretch" Background="Purple" ItemsSource="{Binding Path=TimeToNum}" 
+        <ListBox Grid.Column="1" HorizontalAlignment="Stretch" Background="LightSteelBlue" ItemsSource="{Binding Path=TimeToNum}" 
           DisplayMemberPath="FullInfo"></ListBox>
             <StackPanel Orientation="Vertical" Grid.Column="0">
             <TextBlock HorizontalAlignment="Center">Find Number : <Run FontSize="20" FontFamily="Bold" Text="{Binding Path=FindNum}"></Run></TextBlock>
@@ -99,9 +99,9 @@
                             <Button Click="Button_Click" Margin="3"></Button>
                             <Button Click="Button_Click" Style="{StaticResource yellowBtn}" Margin="3"></Button>
                             <Button Click="Button_Click" Style="{StaticResource purpleBtn}" Margin="3"></Button>
-                            <Button Click="Button_Click" Margin="3" IsEnabled="False">
+                            <Label Margin="3" IsEnabled="False">
                                 <Image Source="Eye\file.png" Stretch="Fill"/>
-                            </Button>
+                            </Label>
                             <Button Click="Button_Click" Style="{StaticResource yellowBtn}" Margin="3"></Button>
                             <Button Click="Button_Click" Style="{StaticResource blueBtn}" Margin="3"></Button>
                             <Button Click="Button_Click" Margin="3"></Button>
